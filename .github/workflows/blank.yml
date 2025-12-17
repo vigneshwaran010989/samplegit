@@ -26,13 +26,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
         env: 
-          Name: ${{vars.NAME}}
+          Name: ${{ vars.NAME }}
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!!!!!
       - name: Just env variable
-        run: $Name
+        run: echo $Name
       
 
       # Runs a set of commands using the runners shell
